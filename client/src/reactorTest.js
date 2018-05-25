@@ -37,4 +37,4 @@ class Reactor extends Component {
   }
 }
 
-export default Reactor
+export default Reactor;

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Reactor from './reactorTest.js';
+import Navi from './Navbar.js';
 
 class App extends Component {
   state = {users: [], value: ''};
@@ -19,6 +20,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Navi />
         <h1>Users</h1>
         {this.state.users.map(user =>
           <div key={user.id}>{user.username}</div>
