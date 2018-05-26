@@ -5,8 +5,8 @@ class Navi extends Component {
   render() {
     return (
       <div className='Navbar'>
-        <div className='NavHead'>
-          Nav Head
+        <div className='NavHead' >
+          <img src="./favicon.ico"></img>
         </div>
         <div className='Nav1'>
           Nav 1

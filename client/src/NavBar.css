@@ -2,9 +2,11 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   background-color: #26beb0;
+  grid-template-rows: 100px;
 }
 .NavHead {
   grid-column: 1;
+  padding: 1em;
 }
 
 .Nav1 {
