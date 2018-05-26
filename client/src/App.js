@@ -16,19 +16,24 @@ class App extends Component {
   }
 
 
-
   render() {
     return (
       <div className="App">
-        <Navi />
-        <h1>Users</h1>
-        {this.state.users.map(user =>
-          <div key={user.id}>{user.username}</div>
-        )}
-        <p>Hello</p>
-        <input type="text" />
-        <button>Submit</button>
-        <Reactor />
+        <div className="App-header">
+          <Navi/>
+        </div>
+        <div className="App-intro">
+          <h1>Users</h1>
+          {this.state.users.map(user =>
+            <div key={user.id}>{user.username}</div>
+          )}
+          <p>Hello</p>
+          <input type="text" />
+          <button>Submit</button>
+        </div>
+        <div className="App-part2">
+          <Reactor />
+        </div>
       </div>
     );
   }

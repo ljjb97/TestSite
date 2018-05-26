@@ -1,6 +1,7 @@
 .Navbar {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  background-color: #26beb0;
 }
 .NavHead {
   grid-column: 1;

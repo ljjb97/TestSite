@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import './App.css';
+import './reactorTest.css';
 
 class Reactor extends Component {
   constructor(props) {
     super(props);
     this.state = {
       toggle: true,
-      cssClass: "App",
+      cssClass: "App-head",
       navSwitch: "Collapse-Nav"
     };
     this.handleOver = this.handleOver.bind(this);
@@ -15,14 +15,14 @@ class Reactor extends Component {
 
   handleOver() {
     this.setState(prevState => ({
-      cssClass: "App-header",
+      cssClass: "App-head-over",
       navSwitch: "Collapse-Nav-Over"
     }))
   }
 
   handleLeave() {
     this.setState(prevState => ({
-      cssClass: "App",
+      cssClass: "App-head",
       navSwitch: "Collapse-Nav"
     }))
   }
