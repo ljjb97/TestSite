@@ -1,4 +1,22 @@
+.App {
+  display: grid;
+  text-align: center;
+  background-color: #fab900;
+  grid-column: 1fr
+}
 
+.App-header {
+  background-color: #7dd6be
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.App-part2 {
+}
+
+@media (min-width:400) {
   .App {
     display: grid;
     grid-template-columns: repeat(3 , 1fr);
@@ -24,6 +42,7 @@
   .App-part2 {
     grid-area: d;
   }
+}
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

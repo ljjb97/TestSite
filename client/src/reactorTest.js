@@ -5,33 +5,31 @@ class Reactor extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      toggle: true,
+      toggle: false,
       cssClass: "App-head",
       navSwitch: "Collapse-Nav"
     };
-    this.handleOver = this.handleOver.bind(this);
-    this.handleLeave =this.handleLeave.bind(this);
+    this.testToggle = this.testToggle.bind(this);
+    this.testOffToggle = this.testOffToggle.bind(this);
   }
 
-  handleOver() {
+  testToggle() {
     this.setState(prevState => ({
-      cssClass: "App-head-over",
-      navSwitch: "Collapse-Nav-Over"
+      toggle: true
     }))
   }
 
-  handleLeave() {
+  testOffToggle() {
     this.setState(prevState => ({
-      cssClass: "App-head",
-      navSwitch: "Collapse-Nav"
+      toggle: false
     }))
   }
 
   render() {
     return(
-      <div className={this.state.cssClass} onMouseOver={this.handleOver} onMouseLeave={this.handleLeave}>
+      <div className={this.state.toggle? "App-head-over" : "App-head"} onMouseOver={this.testToggle } onMouseLeave={this.testOffToggle}>
         <p>Hello world this is a diffrent Component</p>
-        <button className={this.state.navSwitch}>Button 1</button>
+        <button className={this.state.toggle? "Collapse-Nav-Over" : "Collapse-Nav"}>Button</button>
       </div>
     );
   }
