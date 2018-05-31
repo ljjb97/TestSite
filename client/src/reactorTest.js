@@ -5,9 +5,7 @@ class Reactor extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      toggle: false,
-      cssClass: "App-head",
-      navSwitch: "Collapse-Nav"
+      toggle: false
     };
     this.testToggle = this.testToggle.bind(this);
     this.testOffToggle = this.testOffToggle.bind(this);

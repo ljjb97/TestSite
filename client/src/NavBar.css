@@ -24,3 +24,11 @@
 .Nav4 {
   grid-column: 5;
 }
+
+.dropping-menu {
+  display: none;
+}
+
+.no-drop {
+  
+}

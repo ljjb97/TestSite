@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 import './NavBar.css';
+import DropMenu from './DropMenu';
 
 class Navi extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      mouseOver: false
+      toggle: false
     };
     this.toggler = this.toggler.bind(this);
   }
 
   toggler() {
     this.setState(prevState => ({
-      mouseOver: !(this.state.mouseOver)
+      toggle: false
     }))
   }
 
@@ -22,12 +23,10 @@ class Navi extends Component {
         <div className='NavHead' >
           <img src="./favicon.ico" alt-text="no"></img>
         </div>
-        <div className='Nav1' onMouseOver={this.handleOver}>
+        <div className='Nav1' onMouseOver={this.toggler}>
           Nav 1
         </div>
-        <div className='Nav2'>
-          Nav 2
-        </div>
+        <DropMenu onMouseOver={this.toggler}/>
         <div className='Nav3'>
           Nav 3
         </div>
